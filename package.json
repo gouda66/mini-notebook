@@ -1,0 +1,17 @@
+{
+  "name": "mini-notebook",
+  "version": "1.0.0",
+  "description": "侧边栏开发进度记事本，支持各大 AI Agent (Codex/Claude/Devin) 通过 MCP 自动同步验收进度",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "mcp": "node src/mcp-server.js",
+    "cli": "node src/cli.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0"
+  }
+}

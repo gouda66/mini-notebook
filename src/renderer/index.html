@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Notebook - 开发进度侧边栏</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="collapsed-bar" class="collapsed-bar hidden" title="展开侧边栏">
+    <span>◀</span>
+  </div>
+
+  <div id="app" class="app">
+    <header class="titlebar">
+      <div class="title-left">
+        <span class="dot"></span>
+        <span class="title">开发进度记事本</span>
+      </div>
+      <div class="title-actions">
+        <button id="btn-pin" class="icon-btn active" title="置顶/取消置顶">📌</button>
+        <button id="btn-collapse" class="icon-btn" title="收起侧边栏">▶</button>
+        <button id="btn-hide" class="icon-btn" title="隐藏 (Alt+N 呼出)">✕</button>
+      </div>
+    </header>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">全部 <span id="count-all">0</span></button>
+      <button class="filter-btn" data-filter="todo">未完成 <span id="count-todo">0</span></button>
+      <button class="filter-btn" data-filter="continue">需继续 <span id="count-continue">0</span></button>
+      <button class="filter-btn" data-filter="done">已完成 <span id="count-done">0</span></button>
+    </div>
+
+    <form id="add-form" class="add-form">
+      <input id="new-title" type="text" placeholder="输入新任务，回车添加..." autocomplete="off" />
+      <button type="submit">+</button>
+    </form>
+
+    <main id="task-list" class="task-list"></main>
+
+    <footer class="footer">
+      <span>快捷键 Alt+N 呼出/隐藏 · 支持 MCP 自动同步</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
